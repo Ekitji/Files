@@ -1,5 +1,5 @@
-﻿# Specify the path to the loldrivers.json file
- # Download from https://www.loldrivers.io/api/drivers.json
+# Specify the path to the loldrivers.json file
+# Download from https://www.loldrivers.io/api/drivers.json
 $loldriversFilePath = "C:\Users\*\Desktop\loldrivers\drivers.json"
 
 # Get all driver files in C:\windows\system32\drivers directory
@@ -17,7 +17,8 @@ foreach ($driver in $drivers) {
         # Calculate the SHA256 hash of the driver file
         $hash = Get-FileHash -Algorithm SHA256 -Path $driver.FullName -ErrorAction Stop | Select-Object -ExpandProperty Hash
         $status = "OK"
-        if ($loldrivers.KnownVulnerableSamples.Filename -contains $driver.Name) {
+        $vulnerableSample = $loldrivers.KnownVulnerableSamples | Where-Object { $_.SHA256 -eq $hash }
+        if ($vulnerableSample) {
             $status = "Vulnerable"
         }
         $hashes += [PSCustomObject]@{
