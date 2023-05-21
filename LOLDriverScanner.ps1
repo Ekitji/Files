@@ -8,7 +8,10 @@ $drivers = Get-ChildItem -Path "C:\windows\system32\drivers" -Force -Recurse -Fi
 # Read the contents of the loldrivers.json file
 $loldrivers = Get-Content -Path $loldriversFilePath | ConvertFrom-Json
 
-Write-Output "Checking $($drivers.Count) drivers in C:\windows\system32\drivers against loldrivers.io JSON file"
+Write-Host "Checking $($drivers.Count) drivers in C:\windows\system32\drivers against loldrivers.io JSON file" -ForegroundColor Yellow
+
+#Declare a variable to keep track of the vulnerable drivers count
+$vulnerableCount = 0
 
 $hashes = @()
 
@@ -21,7 +24,10 @@ foreach ($driver in $drivers) {
         if ($vulnerableSample) {
             $status = "Vulnerable"
         }
-
+       if ($vulnerableSample) {
+        $status = "Vulnerable"
+        $vulnerableCount++
+        }
         # Calculate the Authenticode SHA256 hash of the driver file
         $authenticodeHash = (Get-AppLockerFileInformation -Path $driver.FullName).Hash
         $authenticodeHash = $authenticodeHash -replace 'SHA256 0X', ''
@@ -30,6 +36,11 @@ foreach ($driver in $drivers) {
         $authenticodeMatch = $loldrivers.KnownVulnerableSamples.Authentihash.SHA256 -contains $authenticodeHash
         if ($authenticodeMatch) {
             $status = "Vulnerable"
+        
+        if ($vulnerableSample) {
+        $status = "Vulnerable"
+        $vulnerableCount++
+        }
         }
         $hashes += [PSCustomObject]@{
             Driver = $driver.Name
@@ -43,6 +54,7 @@ foreach ($driver in $drivers) {
             Driver = $driver.Name
             SHA256Hash = "Hash Calculation Failed: $($_.Exception.Message)"
             Status = "Error"
+            Path = $driver.FullName
         }
     }
 }
@@ -75,4 +87,7 @@ $hashesSorted = $hashes | Sort-Object -Property @{Expression = { if ($_.Status -
 
 
 # Display the sorted results in Out-GridView
-$hashesSorted | Out-GridView
+$hashesSorted | Out-GridView -Title "Results from LOLDrivers scan, check Status column for value: Vulnerable"
+
+Write-Host "Scanning after LOLDrivers completed" -ForegroundColor Green
+Write-Host "Found $vulnerableCount Vulnerable Drivers" -ForegroundColor $(if ($vulnerableCount -gt 0) { "Red" } else { "Green" })
