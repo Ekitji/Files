@@ -37,9 +37,11 @@ foreach ($driver in $drivers) {
         if ($authenticodeMatch) {
             $status = "Vulnerable"
         
-        if ($vulnerableSample) {
+        if ($authenticodeMatch) {
         $status = "Vulnerable"
-        $vulnerableCount++
+         if ($vulnerableSample -eq $null) {
+                $vulnerableCount++
+            }
         }
         }
         $hashes += [PSCustomObject]@{
