@@ -30,7 +30,7 @@ foreach ($driver in $drivers) {
         $authenticodeHash = $authenticodeHash -replace 'SHA256 0X', ''
         
         # Check the Authenticode SHA256 hash against the drivers.json file
-        $authenticodeMatch = $loldrivers.KnownVulnerableSamples.Authentihash.SHA256 -contains $authenticodeHash
+        $authenticodeMatch = $loldrivers.KnownVulnerableSamples.Authentihash| Where-Object { $_.SHA256 -eq $authenticodeHash} 
 
         if ($authenticodeMatch) {
         $status = "Vulnerable"
