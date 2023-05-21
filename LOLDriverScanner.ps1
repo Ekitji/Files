@@ -33,7 +33,7 @@ foreach ($driver in $drivers) {
         }
         $hashes += [PSCustomObject]@{
             Driver = $driver.Name
-            Hash = $hash
+            SHA256Hash = $hash
             AuthenticodeHash = $authenticodeHash
             Status = $status
             Path = $driver.FullName
@@ -41,7 +41,7 @@ foreach ($driver in $drivers) {
     } catch {
         $hashes += [PSCustomObject]@{
             Driver = $driver.Name
-            Hash = "Hash Calculation Failed: $($_.Exception.Message)"
+            SHA256Hash = "Hash Calculation Failed: $($_.Exception.Message)"
             Status = "Error"
         }
     }
@@ -51,19 +51,19 @@ foreach ($driver in $drivers) {
 Write-Output ""
 foreach ($hashEntry in $hashes) {
     $driver = $hashEntry.Driver
-    $hash = $hashEntry.Hash
+    $hash = $hashEntry.SHA256Hash
     $authenticodeHash = $hashEntry.AuthenticodeHash
     $status = $hashEntry.Status
 
     if ($status -eq "Vulnerable") {
         Write-Host "Driver: $driver"
-        Write-Host "Hash:   $hash   AuthenticodeHash:   $authenticodeHash   Status: $status" -ForegroundColor Red
+        Write-Host "SHA256Hash:   $hash   AuthenticodeHash:   $authenticodeHash   Status: $status" -ForegroundColor Red
     } elseif ($status -eq "Error") {
         Write-Host "Driver: $driver"
-        Write-Host "Hash:   $hash   AuthenticodeHash:   $authenticodeHash   Status: $status" -ForegroundColor Yellow
+        Write-Host "SHA256Hash:   $hash   AuthenticodeHash:   $authenticodeHash   Status: $status" -ForegroundColor Yellow
     } else {
         Write-Host "Driver: $driver"
-        Write-Host "Hash:   $hash   AuthenticodeHash:   $authenticodeHash   Status: $status" -ForegroundColor Green
+        Write-Host "SHA256Hash:   $hash   AuthenticodeHash:   $authenticodeHash   Status: $status" -ForegroundColor Green
     }
 
     Write-Output ""
