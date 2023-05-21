@@ -21,9 +21,6 @@ foreach ($driver in $drivers) {
         $hash = Get-FileHash -Algorithm SHA256 -Path $driver.FullName -ErrorAction Stop | Select-Object -ExpandProperty Hash
         $status = "OK"
         $vulnerableSample = $loldrivers.KnownVulnerableSamples | Where-Object { $_.SHA256 -eq $hash }
-        if ($vulnerableSample) {
-            $status = "Vulnerable"
-        }
        if ($vulnerableSample) {
         $status = "Vulnerable"
         $vulnerableCount++
@@ -34,14 +31,11 @@ foreach ($driver in $drivers) {
         
         # Check the Authenticode SHA256 hash against the drivers.json file
         $authenticodeMatch = $loldrivers.KnownVulnerableSamples.Authentihash.SHA256 -contains $authenticodeHash
-        if ($authenticodeMatch) {
-            $status = "Vulnerable"
-        
+
         if ($authenticodeMatch) {
         $status = "Vulnerable"
          if ($vulnerableSample -eq $null) {
                 $vulnerableCount++
-            }
         }
         }
         $hashes += [PSCustomObject]@{
