@@ -55,7 +55,7 @@ foreach ($driver in $drivers) {
         $hashes += [PSCustomObject]@{
             Driver = $driver.Name
             SHA256Hash = "Hash Calculation Failed: $($_.Exception.Message)"
-            AuthenticodeHash = $authenticodeHash
+            AuthenticodeHash = "Hash Calculation Failed: $($_.Exception.Message)"
             Status = "Error"
             Path = $driver.FullName
         }
