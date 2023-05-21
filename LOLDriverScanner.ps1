@@ -21,10 +21,22 @@ foreach ($driver in $drivers) {
         if ($vulnerableSample) {
             $status = "Vulnerable"
         }
+
+        # Calculate the Authenticode SHA256 hash of the driver file
+        $authenticodeHash = (Get-AppLockerFileInformation -Path $driver.FullName).Hash
+        $authenticodeHash = $authenticodeHash -replace 'SHA256 0X', ''
+        
+        # Check the Authenticode SHA256 hash against the drivers.json file
+        $authenticodeMatch = $loldrivers.KnownVulnerableSamples.Authentihash.SHA256 -contains $authenticodeHash
+        if ($authenticodeMatch) {
+            $status = "Vulnerable"
+        }
         $hashes += [PSCustomObject]@{
             Driver = $driver.Name
             Hash = $hash
+            AuthenticodeHash = $authenticodeHash
             Status = $status
+            Path = $driver.FullName
         }
     } catch {
         $hashes += [PSCustomObject]@{
@@ -40,14 +52,18 @@ Write-Output ""
 foreach ($hashEntry in $hashes) {
     $driver = $hashEntry.Driver
     $hash = $hashEntry.Hash
+    $authenticodeHash = $hashEntry.AuthenticodeHash
     $status = $hashEntry.Status
 
     if ($status -eq "Vulnerable") {
         Write-Host "Driver: $driver"
-        Write-Host "Hash:   $hash    Status: $status" -ForegroundColor Red
+        Write-Host "Hash:   $hash   AuthenticodeHash:   $authenticodeHash   Status: $status" -ForegroundColor Red
+    } elseif ($status -eq "Error") {
+        Write-Host "Driver: $driver"
+        Write-Host "Hash:   $hash   AuthenticodeHash:   $authenticodeHash   Status: $status" -ForegroundColor Yellow
     } else {
         Write-Host "Driver: $driver"
-        Write-Host "Hash:   $hash    Status: $status" -ForegroundColor Green
+        Write-Host "Hash:   $hash   AuthenticodeHash:   $authenticodeHash   Status: $status" -ForegroundColor Green
     }
 
     Write-Output ""
@@ -55,7 +71,8 @@ foreach ($hashEntry in $hashes) {
 
 # Sort the array based on the "Status" column to display vulnerable drivers at the top in Out-GridView
 Write-Output ""
-$hashesSorted = $hashes | Sort-Object -Property @{Expression = { if ($_.Status -eq "Vulnerable") { 0 } else { 1 } } }
+$hashesSorted = $hashes | Sort-Object -Property @{Expression = { if ($_.Status -eq "Vulnerable") { 0 } elseif ($_.Status -eq "Error") { 1 } else { 2 } } }
+
 
 # Display the sorted results in Out-GridView
 $hashesSorted | Out-GridView
