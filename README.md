@@ -11,6 +11,10 @@ Special thanks to:
 Oddvar Moe @ Twitter, http://oddvar.moe
 for the idea.
 
+### Webrequest support and additional feature with path/filee xtension changes
+@MHaggis at
+https://gist.github.com/MHaggis/76c71de1f206c18531429851baad8e6b
+
 
 ### Living Off The Land Drivers
 Living Off The Land Drivers is a curated list of Windows drivers used by adversaries to bypass security controls and carry out attacks. The project helps security professionals stay informed and mitigate potential threats.
