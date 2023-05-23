@@ -1,4 +1,4 @@
-﻿# Specify the path to the loldrivers.json file
+# Specify the path to the loldrivers.json file
 # Download from https://www.loldrivers.io/api/drivers.json
 $loldriversFilePath = "C:\Users\*\Desktop\loldrivers\drivers.json"
 
