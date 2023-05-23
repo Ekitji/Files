@@ -12,7 +12,7 @@ $drivers = Get-ChildItem -Path "C:\" -Force -Recurse -File -Filter "*.sys" -Erro
 # Read the contents of the loldrivers.json file
 $loldrivers = Get-Content -Path $loldriversFilePath | ConvertFrom-Json
 
-Write-Host "Hashing $($drivers.Count) drivers found in C:\ and checking against loldrivers.io JSON file" -ForegroundColor Yellow
+Write-Host "Hashing the $($drivers.Count) drivers found in C:\ and checking against loldrivers.io JSON file" -ForegroundColor Yellow
 
 #Declare a variable to keep track of the vulnerable drivers count
 $vulnerableCount = 0
@@ -48,22 +48,22 @@ foreach ($driver in $drivers) {
         }
         $hashes += [PSCustomObject]@{
             Driver = $driver.Name
+            Status = $status
+            Path = $driver.FullName
             SHA256Hash = $sha256Hash
             AuthenticodeHash = $authenticodeHash
             SHA1Hash = $sha1Hash
             MD5Hash = $md5Hash
-            Status = $status
-            Path = $driver.FullName
         }
     } catch {
         $hashes += [PSCustomObject]@{
             Driver = $driver.Name
+            Status = "Error"
+            Path = $driver.FullName
             SHA256Hash = "Hash Calculation Failed: $($_.Exception.Message)" # Mainly the hiberfil.sys, pagefile.sys, swapfile.sys
             AuthenticodeHash = "Hash Calculation Failed: $($_.Exception.Message)" # Mainly the hiberfil.sys, pagefile.sys, swapfile.sys
             SHA1Hash = "Hash Calculation Failed: $($_.Exception.Message)" # Mainly the hiberfil.sys, pagefile.sys, swapfile.sys
             MD5Hash = "Hash Calculation Failed: $($_.Exception.Message)" # Mainly the hiberfil.sys, pagefile.sys, swapfile.sys
-            Status = "Error"
-            Path = $driver.FullName
         }
     }
 }
