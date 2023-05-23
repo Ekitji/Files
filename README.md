@@ -11,7 +11,7 @@ Special thanks to:
 Oddvar Moe @ Twitter, http://oddvar.moe
 for the idea.
 
-### Webrequest support and additional feature with path/filee xtension changes
+### Webrequest support and additional feature with path/file extension changes
 @MHaggis at
 https://gist.github.com/MHaggis/76c71de1f206c18531429851baad8e6b
 
