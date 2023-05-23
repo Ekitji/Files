@@ -96,7 +96,7 @@ $hashesSorted = $hashes | Sort-Object -Property @{Expression = { if ($_.Status -
 
 
 # Display the sorted results in Out-GridView
-$hashesSorted | Out-GridView -Title "Results from LOLDrivers scan, check Status column for value: Vulnerable, Copy row with CTRL-C"
+$hashesSorted | Out-GridView -Title "Results from LOLDrivers scan, $vulnerableCount vulnerable drivers of $($drivers.Count), check Status column for value: Vulnerable, Copy row with CTRL-C"
 
 Write-Host "Scanning after LOLDrivers completed" -ForegroundColor Green
 Write-Host "Found $vulnerableCount Vulnerable Drivers" -ForegroundColor $(if ($vulnerableCount -gt 0) { "Red" } else { "Green" })
