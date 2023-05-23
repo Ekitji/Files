@@ -2,8 +2,8 @@
 # Download from https://www.loldrivers.io/api/drivers.json
 $loldriversFilePath = "C:\Users\*\Desktop\loldrivers\drivers.json"
 
-# Get all driver files in C:\windows\system32\drivers directory
-$drivers = Get-ChildItem -Path "C:\windows\system32\drivers" -Force -Recurse -File -Filter "*.sys"
+# Get all driver files in C:\windows\system32\Drivers* directory and C:\Windows\SysWOW64\drivers
+$drivers = Get-ChildItem -Path "C:\windows\system32\drivers","C:\Windows\System32\DriverStore","C:\Windows\SysWOW64\drivers","C:\Windows\System32\drivers" -Force -Recurse -File -Filter "*.sys"
 
 # Read the contents of the loldrivers.json file
 $loldrivers = Get-Content -Path $loldriversFilePath | ConvertFrom-Json
