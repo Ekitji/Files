@@ -24,7 +24,7 @@ for the idea.
 
 ### Webrequest support and additional feature with path/file extension changes
 @MHaggis at
-https://gist.github.com/MHaggis/76c71de1f206c18531429851baad8e6b
+https://github.com/MHaggis/notes/blob/master/utilities/scan-drivers.ps1
 
 
 ### Living Off The Land Drivers
