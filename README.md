@@ -39,6 +39,13 @@ Uses saved EVTX logfiles (from breaches or other simulations) to simulate attack
 I have put many hours of work of going through several hundreds of EVTX-files and the data inside to find key/values of interest for simulation. The work is done but there may be once i have missed.
 I have tried to comment the script and winlogbeat-evtxtojson.yml as much as possible.
 
+Modified and added extra feature where simulation occurs by me (Ekkie)
+
+Original script without feature for simulation.
+Credits to Grant Sales
+[https://gist.github.com/gwsales](https://github.com/gwsales/Winlogbeat-Bulk-Read)
+
+
 
 SimulAPTer is a powershell script that uses winlogbeat to parse the evtx files which are later saved in ndjson/json format (depending on winlogbeat version), it then saves all separate ndjson files in to a single file (depending on how many EVTX files that is found in powershell script folder).
 
