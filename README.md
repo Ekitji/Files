@@ -4,7 +4,7 @@ https://www.loldrivers.io/api/drivers.json
 
 ## LOLDriverScanner All
 Download the LOLDriverScanner_ALL script and download the drivers.json file (link above, sorry no webrequest included, dont like pwsh talking to internet =] )
-Put the drivers.json in LOLDriverScanners root folder and run the script-
+Put the drivers.json in LOLDriverScanners root folder and run the script.
 This one is more aggressive and will search in whole C: for sys-files. It checks MD5,SHA1,SHA256, Authenticode (SHA256) against the loldrivers json file.
 
 The results will be in console or GridView (excel look-a-like)
