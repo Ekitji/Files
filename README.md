@@ -35,12 +35,12 @@ https://www.loldrivers.io/api/drivers.json
 
 
 ## SimulAPTer
-Uses saved EVTX logfiles (from breaches or other simulations) to simulate attacks in your environment by letting the user to specify usernames, hostnames etc. 
-Its many hours behind the work of going through several hundreds of EVTX-files and the data inside to find key/values of interest for simulation. The work is done but there may be once i have missed.
+Uses saved EVTX logfiles (from breaches or other simulations) to simulate attacks in your environment by letting the user to specify usernames, hostnames etc.
+I have put many hours of work of going through several hundreds of EVTX-files and the data inside to find key/values of interest for simulation. The work is done but there may be once i have missed.
 I have tried to comment the script and winlogbeat-evtxtojson.yml as much as possible.
 
 
-SimulAPTer is a powershell script that uses winlogbeat to parse the evtx files which are saved in ndjson/json format (depending on winlogbeat version), it then saves all ndjson files to a single file (depending on how many EVTX files that is found in powershell script folder).
+SimulAPTer is a powershell script that uses winlogbeat to parse the evtx files which are later saved in ndjson/json format (depending on winlogbeat version), it then saves all separate ndjson files in to a single file (depending on how many EVTX files that is found in powershell script folder).
 
 The script asks user for information like:
 * Enter the victim username you want to simulate
@@ -65,13 +65,13 @@ Download latest winlogbeat from https://www.elastic.co/downloads/beats/winlogbea
 (latest test with Winlogbeat 8.8.0)
 
 Download the scripts and the winlogbeat (unzip downloaded winlogbeat) in same root folder, structure should look like
-For example inside C:\Users\Ekkie\Desktop\Simulapter
+For example inside C:\Users\Ekitji\Desktop\Simulapter
 
 winlogbeat-8.8.0-windows-x86_64 (directory which contains winlogbeat.exe)
 SimulAPTer.ps1
 winlogbeat-evtxtojson.yml
 
-Make a new directory in C:\Users\Ekkie\Desktop\Simulapter where you put all your EVTX files you want to parse and simulate, or simply put them in your root folder where the script is located.
+Make a new directory in C:\Users\Ekitji\Desktop\Simulapter where you put all your EVTX files you want to parse and simulate, or simply put them in your root folder where the script is located.
 In my example i will call it evtx_files
 
 Run the script and answer the popup boxes where you can type what username, hostname etc you want to simulate.
@@ -79,9 +79,9 @@ User will be prompted when the parsing and population is finished.
 
 ############################################################################################################
 ####                                     ALL FILES SAVED                                                    
-####        For all untouched files   C:\Users\Ekkie\Desktop\Simulapter\converted\allinoneraw.ndjson                                     
-####        For pretty viewing check  C:\Users\Ekkie\Desktop\Simulapter\converted\alleventspretty.json                                   
-####        For importing to SIEM check  C:\Users\Ekkie\Desktop\Simulapter\converted\allevents.ndjson                                     
+####        For all untouched files   C:\Users\Ekitji\Desktop\Simulapter\converted\allinoneraw.ndjson                                     
+####        For pretty viewing check  C:\Users\Ekitji\Desktop\Simulapter\converted\alleventspretty.json                                   
+####        For importing to SIEM check  C:\Users\Ekitji\Desktop\Simulapter\converted\allevents.ndjson                                     
 ####                                      HAPPY HUNTING                                                     
 ############################################################################################################
 
