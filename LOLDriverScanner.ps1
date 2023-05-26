@@ -1,7 +1,6 @@
 # Specify the path to the loldrivers.json file
 # Download from https://www.loldrivers.io/api/drivers.json
-$loldriversFilePath = "C:\Users\*\Desktop\loldrivers\drivers.json"
-
+$loldriversFilePath = "$PSScriptRoot\drivers.json"
 # Get all driver files in C:\windows\system32\Drivers* directory and C:\Windows\SysWOW64\drivers
 $drivers = Get-ChildItem -Path "C:\windows\system32\drivers","C:\Windows\System32\DriverStore","C:\Windows\SysWOW64\drivers","C:\Windows\System32\drivers" -Force -Recurse -File -Filter "*.sys"
 
