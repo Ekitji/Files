@@ -1,4 +1,5 @@
-# Specify the path to the loldrivers.json file
+# Specify the path to the loldrivers.json file or simply put it in the powershell script root
+# and run the script
 # Download from https://www.loldrivers.io/api/drivers.json
 $loldriversFilePath = "$PSScriptRoot\drivers.json"
 # Get all driver files in C:\
