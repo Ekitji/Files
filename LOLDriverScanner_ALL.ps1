@@ -4,7 +4,7 @@
 $loldriversFilePath = "$PSScriptRoot\drivers.json"
 # Check if the loldrivers.json file exists
 if (-not (Test-Path -Path $loldriversFilePath)) {
-    Write-Host "loldrivers.json file not found, please download from https://www.loldrivers.io/api/drivers.json or specify path in script" -ForegroundColor Red
+    Write-Host "drivers.json file not found, please download from https://www.loldrivers.io/api/drivers.json and specify path in script or put it in scripts root folder" -ForegroundColor Red
     Exit
 }
 # Get all driver files in C:\
