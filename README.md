@@ -67,9 +67,9 @@ Download latest winlogbeat from https://www.elastic.co/downloads/beats/winlogbea
 Download the scripts and the winlogbeat (unzip downloaded winlogbeat) in same root folder, structure should look like
 For example inside C:\Users\Ekitji\Desktop\Simulapter
 
-winlogbeat-8.8.0-windows-x86_64 (directory which contains winlogbeat.exe)
-SimulAPTer.ps1
-winlogbeat-evtxtojson.yml
+* winlogbeat-8.8.0-windows-x86_64 (directory which contains winlogbeat.exe)
+* SimulAPTer.ps1
+* winlogbeat-evtxtojson.yml
 
 Make a new directory in C:\Users\Ekitji\Desktop\Simulapter where you put all your EVTX files you want to parse and simulate, or simply put them in your root folder where the script is located.
 In my example i will call it evtx_files
@@ -77,13 +77,13 @@ In my example i will call it evtx_files
 Run the script and answer the popup boxes where you can type what username, hostname etc you want to simulate.
 User will be prompted when the parsing and population is finished.
 
-############################################################################################################
-####                                     ALL FILES SAVED                                                    
-####        For all untouched files   C:\Users\Ekitji\Desktop\Simulapter\converted\allinoneraw.ndjson                                     
-####        For pretty viewing check  C:\Users\Ekitji\Desktop\Simulapter\converted\alleventspretty.json                                   
-####        For importing to SIEM check  C:\Users\Ekitji\Desktop\Simulapter\converted\allevents.ndjson                                     
-####                                      HAPPY HUNTING                                                     
-############################################################################################################
+
+                                   ALL FILES SAVED                                                    
+        For all untouched files   C:\Users\Ekitji\Desktop\Simulapter\converted\allinoneraw.ndjson                                     
+        For pretty viewing check  C:\Users\Ekitji\Desktop\Simulapter\converted\alleventspretty.json                                   
+        For importing to SIEM check  C:\Users\Ekitji\Desktop\Simulapter\converted\allevents.ndjson                                     
+                                   HAPPY HUNTING                                                     
+
 
 Supporting SIEMS which are confirmed.
 
