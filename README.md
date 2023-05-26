@@ -64,7 +64,7 @@ The end user will be informed when script is done
 Download latest winlogbeat from https://www.elastic.co/downloads/beats/winlogbeat
 (latest test with Winlogbeat 8.8.0)
 
-Download the scripts and the winlogbeat (unzip downloaded winlogbeat) in same root folder, structure should look like
+Download the script SimulAPTer.ps1, winlogbeat-evtxtojson.yml and put winlogbeat (unzip downloaded winlogbeat) in same root folder, structure should look like
 For example inside C:\Users\Ekitji\Desktop\Simulapter
 
 * winlogbeat-8.8.0-windows-x86_64 (directory which contains winlogbeat.exe)
@@ -72,11 +72,12 @@ For example inside C:\Users\Ekitji\Desktop\Simulapter
 * winlogbeat-evtxtojson.yml
 
 Make a new directory in C:\Users\Ekitji\Desktop\Simulapter where you put all your EVTX files you want to parse and simulate, or simply put them in your root folder where the script is located.
-In my example i will call it evtx_files
+The script will check powershell scripts root folder recursively for EVTX-files.
+In my example i will create a directory in C:\Users\Ekitji\Desktop\Simulapter and call it evtx_files and put the EVTX files there.
 
 Run the script and answer the popup boxes where you can type what username, hostname etc you want to simulate.
-User will be prompted when the parsing and population is finished.
 
+User will be prompted when the parsing and population is finished.
 
                                    ALL FILES SAVED                                                    
         For all untouched files   C:\Users\Ekitji\Desktop\Simulapter\converted\allinoneraw.ndjson                                     
