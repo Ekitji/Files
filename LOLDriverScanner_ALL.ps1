@@ -2,6 +2,11 @@
 # and run the script
 # Download from https://www.loldrivers.io/api/drivers.json
 $loldriversFilePath = "$PSScriptRoot\drivers.json"
+# Check if the loldrivers.json file exists
+if (-not (Test-Path -Path $loldriversFilePath)) {
+    Write-Host "loldrivers.json file not found, please download from https://www.loldrivers.io/api/drivers.json or specify path in script" -ForegroundColor Red
+    Exit
+}
 # Get all driver files in C:\
 Write-Host "Scanning after sys-files" -ForegroundColor Green
 $drivers = Get-ChildItem -Path "C:\" -Force -Recurse -File -Filter "*.sys" -ErrorAction SilentlyContinue
