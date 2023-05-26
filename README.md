@@ -13,6 +13,7 @@ The results will be in console or GridView (excel look-a-like)
 
 ## LOLDriverScanner
 https://www.loldrivers.io/api/drivers.json
+
 Light variant which is only checking SHA256 AND Authenticode but some loldrivers from the json file dont have these entries and you will likely miss them if
 they exist in your system.
 
