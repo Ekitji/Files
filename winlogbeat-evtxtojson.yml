@@ -1,0 +1,42 @@
+# Name will be set to the value of the EVTX_FILE environment variable.
+# no_more_events sets the behavior of Winlogbeat when Windows reports that there are no more events to read. We want Winlogbeat to stop rather than wait since this is an archived file that will not receive any more events.
+winlogbeat.event_logs:
+  - name: ${EVTX_FILE} 
+    no_more_events: stop
+
+# The amount of time to wait for all events to be published when shutting down.
+winlogbeat.shutdown_timeout: 3s
+# The registry_file where Winlogbeat stores information that it uses to resume monitoring after a restart
+winlogbeat.registry_file: "${CWD}/converted/evtx-registry.yml"
+
+# The path to the directory where the generated files will be saved.
+output.file:
+  path: "${CWD}/converted"
+  # $EVTX_NAME to use the evtx filename when saving the ndjson file. For example $EVTX_NAME-{{datetime}}.ndjson.
+  filename: ${EVTX_NAME}
+  # Maximum number of files to save under path, when number is reached, the oldest file is deleted, and the 
+  # rest of the files are shifted last to first.
+  number_of_files: 1024
+  # The maximum size in kilobytes of each file. When this size is reached, the files are rotated, value 48 mb in binary.
+  rotate_every_kb: 49152
+
+# Contains options for configuring the logging output. Logs warnings, errors, and critical errors.
+# Keeping log-file (rotateonstartup) and appending with new logs when used. Keepfiles options has to be in range of 2-1024.
+logging:
+  level: warning
+  files:
+    path: "${CWD}/converted"
+    rotateonstartup: false
+    keepfiles: 2
+
+# Elasticsearch Output disabled, not needed in our case where we are uploading it manually to SIEM.
+output.elasticsearch: 
+  enabled: false
+
+# The agent.name of the winlogbeat, the hostname of server/source will be used if option is empty. 
+name: "SimulAPTer"
+# Tags include the values below in tags field of the outputted log
+tags: ["SimulAPTer", "simulation", "simulapter"]
+
+# NOTES
+# You can check log.file.path when visualizing in your SIEM to get information about which evtx-file caused the event.
