@@ -105,7 +105,7 @@ https://github.com/NextronSystems/evtx-baseline
 https://github.com/OTRF/Security-Datasets/tree/master/datasets/atomic/windows
 https://github.com/jymcheong/SysmonResources
 https://tryhackme.com/room/windowseventlogs
-https://tryhackme.com/room/sysmon hunting mimikatz, malware, metasploit, med flera.
+https://tryhackme.com/room/sysmon hunting mimikatz, malware, metasploit etc.
 
 Other sources for EVTX files
 Generate them your self or run simulation frameworks and save them
