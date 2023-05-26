@@ -116,11 +116,11 @@ https://tryhackme.com/room/sysmon hunting mimikatz, malware, metasploit etc.
 
 Other sources for EVTX files
 Generate them your self or run simulation frameworks and save them
-● Atomic Red Team
-● Red Team Automation
-● Infection Monkey
-● PurpleSharp / PurpleAD
-● Caldera etc
+* Atomic Red Team
+* Red Team Automation
+* Infection Monkey
+* PurpleSharp / PurpleAD
+* Caldera etc
 
 
 
