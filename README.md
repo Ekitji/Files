@@ -97,7 +97,7 @@ User will be prompted when the parsing and population is finished.
                                    HAPPY HUNTING                                                     
 
 
-Supporting SIEMS which are confirmed.
+**Supporting SIEMS which are confirmed.**
 
 Elastic Stack, upload in Kibana, max file support default 100mb, changeable to 1GB (1000mb) in advanced settings.
 Referens: https://www.elastic.co/blog/importing-csv-and-log-data-into-elasticsearch-with-file-data-visualizer
@@ -105,34 +105,24 @@ Referens: https://www.elastic.co/blog/importing-csv-and-log-data-into-elasticsea
 Splunk, has 500mb file support, last checked May 2022
 
 
-Sources with EVTX files
+**Sources with EVTX files**
 https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES
 https://github.com/mdecrevoisier/EVTX-to-MITRE-Attack
 https://github.com/Yamato-Security/hayabusa-sample-evtx/tree/main/YamatoSecurity
 https://github.com/sans-blue-team/DeepBlueCLI/tree/master/evtx
 https://github.com/JPCERTCC/LogonTracer/tree/master/sample
 
-Sources that may need additional work before running them with SimulAPTer
+**Sources that may need additional work before running them with SimulAPTer**
 https://github.com/NextronSystems/evtx-baseline
 https://github.com/OTRF/Security-Datasets/tree/master/datasets/atomic/windows
 https://github.com/jymcheong/SysmonResources
 https://tryhackme.com/room/windowseventlogs
 https://tryhackme.com/room/sysmon hunting mimikatz, malware, metasploit etc.
 
-Other sources for EVTX files
+**Other sources for EVTX files**
 Generate them your self or run simulation frameworks and save them
 * Atomic Red Team
 * Red Team Automation
 * Infection Monkey
 * PurpleSharp / PurpleAD
 * Caldera etc
-
-
-
-
-
-
-
-
-
-
