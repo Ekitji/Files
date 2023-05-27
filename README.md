@@ -138,6 +138,7 @@ Generate them your self or run simulation frameworks and save them
 * Caldera etc
 
 **Side note**
+
 When specifying a time in script with
 "Enter the time you want to simulate"
 Your time for when the events occurs can pass into the future scoope because of script adding 1 second for each loop if you have a large amount of EVTX files that you run the script on. It will probably be easier for you if you pick a time some days back in time or atleast some hours before the actual time when running it. It depends also when you are going to upload it to your SIEM solution. Maybe you are just creating the log you want to use for a later use and if so this wont be a problem.
@@ -145,7 +146,11 @@ Your time for when the events occurs can pass into the future scoope because of 
 
 You can check log.file.path when visualizing in your SIEM to get information about which evtx-file caused the event.
 
-The agent.name of the winlogbeat is customizable by change the key Name in winlogbeat-evtxtojson.yml, if you have a empty value, the hostname of the system you run the script with will be used. You can also customize the tags you want.
+The agent.name of the winlogbeat is customizable by change the key Name in winlogbeat-evtxtojson.yml, 
+if you have a empty value, the hostname of the system you run the script with will be used. You can also customize the tags you want.
+
 My Selection in my winlogbeat-evtxtojson.yml is
+
 name: "SimulAPTer"
+
 tags: ["SimulAPTer", "simulation", "simulapter"]
