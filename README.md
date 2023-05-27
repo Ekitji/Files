@@ -37,7 +37,8 @@ https://www.loldrivers.io/api/drivers.json
 
 
 ## SimulAPTer
-Uses saved EVTX logfiles (from breaches or other simulations) to simulate attacks in your environment by letting the user to specify usernames, hostnames etc. I have put many hours of work of going through several hundreds of EVTX-files and the data inside to find key/values of interest for simulation. 
+Uses saved EVTX logfiles (from breaches or other simulations) to simulate attacks in your environment by letting the user to specify usernames, hostnames etc. So you can simulate that the events happens in your systems to test alerts/queries and so on.
+I have put many hours of work of going through several hundreds of EVTX-files and the data inside to find key/values of interest for simulation. 
 The work is done but there may be some i could have missed. I have tried to comment the script and winlogbeat-evtxtojson.yml as much as possible.
 
 Modified and added extra feature where simulation occurs by me (Ekkie)
