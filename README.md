@@ -141,7 +141,9 @@ Generate them your self or run simulation frameworks and save them
 **Side note**
 
 When specifying a time in script with
+
 "Enter the time you want to simulate"
+
 Your time for when the events occurs can pass into the future scoope because of script adding 1 second for each loop if you have a large amount of EVTX files that you run the script on. It will probably be easier for you if you pick a time some days back in time or atleast some hours before the actual time when running it. It depends also when you are going to upload it to your SIEM solution. Maybe you are just creating the log you want to use for a later use and if so this wont be a problem.
 
 
@@ -149,7 +151,7 @@ You can check log.file.path when visualizing in your SIEM to get information abo
 
 The agent.name of the winlogbeat is customizable by changing the key "Name" in winlogbeat-evtxtojson.yml, 
 if you have a empty value, the hostname of the system you run the script with will be used. You can also customize the tags you want.
-This information will be included in your parsed evtx files.
+This information will be included in your parsed evtx files which are saved by winlogbeat as ndjson/json files.
 
 My Selection in my winlogbeat-evtxtojson.yml is
 
