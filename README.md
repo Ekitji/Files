@@ -37,7 +37,8 @@ https://www.loldrivers.io/api/drivers.json
 
 
 ## SimulAPTer
-Uses saved EVTX logfiles (from breaches or other simulations) to simulate attacks in your environment by letting the user to specify usernames, hostnames etc. So you can simulate that the events happens in your systems to test alerts/queries and so on. I have forked some excellent repositories that has MITRE mapped EVTX files, baseline usages etc that you can have as a starting point. Pick and choose by Tactic ID or just grab the ones you need to simulate a sequences of adversary behaviors.
+Uses saved EVTX logfiles (from breaches or other simulations) to simulate attacks in your environment by letting the user to specify usernames, hostnames etc. So you can simulate that the events happens in your systems to test alerts/queries and so on. The idea is to have a simulating option without the need to execute any commands in your environment (like other simulations tools).
+I have forked some excellent repositories that has MITRE mapped EVTX files, baseline usages etc that you can have as a starting point. Pick and choose by Tactic ID or just grab the ones you need to simulate a sequences of adversary behaviors.
 I have put many hours of work of going through several hundreds of EVTX-files and the data inside to find key/values of interest for simulation. 
 The work is done but there may be some i could have missed. I have tried to comment the script and winlogbeat-evtxtojson.yml as much as possible.
 
@@ -97,12 +98,14 @@ User will be prompted when the parsing and population is finished.
                                    HAPPY HUNTING                                                     
 
 
-**Supporting SIEMS which are confirmed.**
+**Supporting SIEMS with upload of ndjson/json**
 
 Elastic Stack, upload in Kibana, max file support default 100mb, changeable to 1GB (1000mb) in advanced settings.
 Referens: https://www.elastic.co/blog/importing-csv-and-log-data-into-elasticsearch-with-file-data-visualizer
 
 Splunk, has 500mb file support, last checked May 2022
+
+Other solutions are to use alternative methods to get them in to your SIEM, like the use of a logshipper.
 
 
 **Sources with EVTX files**
@@ -118,6 +121,7 @@ https://github.com/sans-blue-team/DeepBlueCLI/tree/master/evtx
 https://github.com/JPCERTCC/LogonTracer/tree/master/sample
 
 https://github.com/NextronSystems/evtx-baseline
+Check the releases.
 
 https://github.com/jymcheong/SysmonResources
 
