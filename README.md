@@ -89,7 +89,7 @@ In my example i will create a directory in C:\Users\Ekitji\Desktop\Simulapter an
 
 Run the script and answer the popup boxes where you can type what username, hostname etc you want to simulate.
 
-User will be prompted when the parsing and population is finished.
+User will be prompted when the parsing and changes are finished.
 
                                    ALL FILES SAVED                                                    
         For all untouched files   C:\Users\Ekitji\Desktop\Simulapter\converted\allinoneraw.ndjson                                     
