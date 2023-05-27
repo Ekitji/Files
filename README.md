@@ -49,7 +49,7 @@ Credits to Grant Sales
 
 
 
-SimulAPTer is a powershell script that uses winlogbeat to parse the evtx files which are later saved in ndjson/json format (depending on winlogbeat version), it then saves all separate ndjson files in to a single file (depending on how many EVTX files that is found in powershell script folder).
+SimulAPTer is a powershell script that uses winlogbeat to parse the evtx files which are later saved in ndjson/json format (depending on winlogbeat version), it then saves all separate ndjson files in to a single file (depending on how many EVTX files that is found in powershell script root folder).
 
 The script asks user for information like:
 * Enter the victim username you want to simulate
