@@ -15,7 +15,7 @@ The results will be in console or GridView (excel look-a-like)
 https://www.loldrivers.io/api/drivers.json
 
 Light variant which is only checking SHA256 AND Authenticode but some loldrivers from the json file dont have these entries and you will likely miss them if
-they exist in your system. The paths its checking are also only some specific directories and you will likely miss the ones that are in directories that are not common (application/hardware files in uncommon directories.)
+they exist in your system. The paths its checking are also only some specific directories and you will likely miss the ones that are in directories that are not common (application/hardware sys-files in uncommon directories.)
 
 Download the LOLDriverScanner script and download the drivers.json file (link above, sorry no webrequest included, dont like pwsh talking to internet =] )
 Correct the path "$loldriversFilePath" in the powershell script to the location of your drivers.json or just simply put the drivers.json in same root folder as LOLDriverscanner script.
