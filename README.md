@@ -117,13 +117,13 @@ https://github.com/sans-blue-team/DeepBlueCLI/tree/master/evtx
 
 https://github.com/JPCERTCC/LogonTracer/tree/master/sample
 
-**Sources that may need additional work before running them with SimulAPTer**
-
 https://github.com/NextronSystems/evtx-baseline
 
-https://github.com/OTRF/Security-Datasets/tree/master/datasets/atomic/windows
-
 https://github.com/jymcheong/SysmonResources
+
+**Sources that may need additional work before running them with SimulAPTer**
+
+https://github.com/OTRF/Security-Datasets/tree/master/datasets/atomic/windows
 
 https://tryhackme.com/room/windowseventlogs
 
