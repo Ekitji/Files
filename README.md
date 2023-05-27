@@ -153,7 +153,7 @@ Your time for when the events occurs can pass into the future scoope because of 
 
 You can check log.file.path when visualizing in your SIEM to get information about which evtx-file caused the event.
 
-The agent.name of the winlogbeat is customizable by changing the key "Name" in winlogbeat-evtxtojson.yml, 
+The agent.name of the winlogbeat is customizable by changing the value for "Name" in winlogbeat-evtxtojson.yml, 
 if you have a empty value, the hostname of the system you run the script with will be used. You can also customize the tags you want.
 This information will be included in your parsed evtx files which are saved by winlogbeat as ndjson/json files.
 
