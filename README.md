@@ -85,6 +85,7 @@ The script will check powershell scripts root folder recursively for EVTX-files.
 In my example i will create a directory in C:\Users\Ekitji\Desktop\Simulapter and call it evtx_files and put the EVTX files there.
 
 ![Screenshot](Simulapter.png)
+
 Run the script and answer the popup boxes where you can type what username, hostname etc you want to simulate.
 
 User will be prompted when the parsing and population is finished.
