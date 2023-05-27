@@ -121,7 +121,7 @@ https://github.com/sans-blue-team/DeepBlueCLI/tree/master/evtx
 https://github.com/JPCERTCC/LogonTracer/tree/master/sample
 
 https://github.com/NextronSystems/evtx-baseline
-Check the releases.
+- Check the releases.
 
 https://github.com/jymcheong/SysmonResources
 
