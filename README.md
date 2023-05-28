@@ -122,6 +122,8 @@ https://github.com/JPCERTCC/LogonTracer/tree/master/sample
 
 https://github.com/pete-cc/evtx-samples
 
+https://github.com/hrzwtk/MitreAttackEvtx
+
 https://github.com/G4rb3n/Malware-EVTX
 
 https://github.com/NextronSystems/evtx-baseline
@@ -134,8 +136,6 @@ https://github.com/jymcheong/SysmonResources
 https://github.com/OTRF/Security-Datasets/tree/master/datasets/atomic/windows
 
 https://github.com/omerbenamram/evtx
-
-https://github.com/hrzwtk/MitreAttackEvtx
 
 https://tryhackme.com/room/windowseventlogs
 
