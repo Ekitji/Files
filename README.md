@@ -122,8 +122,6 @@ https://github.com/JPCERTCC/LogonTracer/tree/master/sample
 
 https://github.com/G4rb3n/Malware-EVTX
 
-https://github.com/sathishdsgithub/EVTX-SAMPLES
-
 https://github.com/NextronSystems/evtx-baseline
 - Check the releases.
 
