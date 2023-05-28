@@ -42,7 +42,7 @@ I have forked some excellent repositories that has MITRE mapped EVTX files, base
 I have put many hours of work of going through several hundreds of EVTX-files and the data inside to find key/values of interest for simulation. 
 The work is done but there may be some i could have missed. I have tried to comment the script and winlogbeat-evtxtojson.yml as much as possible.
 
-Modified and added extra feature where simulation occurs by me (Ekkie)
+Modified and added extra feature where simulation occurs by me (Ekitji)
 
 Original script without feature for simulation.
 Credits to Grant Sales
