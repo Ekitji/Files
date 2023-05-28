@@ -129,6 +129,8 @@ https://github.com/jymcheong/SysmonResources
 
 https://github.com/OTRF/Security-Datasets/tree/master/datasets/atomic/windows
 
+https://github.com/omerbenamram/evtx
+
 https://tryhackme.com/room/windowseventlogs
 
 https://tryhackme.com/room/sysmon hunting mimikatz, malware, metasploit etc.
