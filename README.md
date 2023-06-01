@@ -22,6 +22,21 @@ Correct the path "$loldriversFilePath" in the powershell script to the location 
 
 Run the script and check the results in console or GridView (excel look-a-like)
 
+## LOLDriverScanner With Certificate Signature check
+https://www.loldrivers.io/api/drivers.json
+
+Download the LOLDriverScanner with certsign check script and download the drivers.json file (link above, sorry no webrequest included, dont like pwsh talking to internet =] )
+Put the drivers.json in LOLDriverScanners root folder and run the script.
+This one is more aggressive and will search in whole C: for sys-files. It checks MD5,SHA1,SHA256, Authenticode (SHA256) against the loldrivers json file.
+It will also retrieve information about the digital/certificate signature of the sys-file, allowing you to verify its authenticity and integrity. 
+ -SignerCertificate.Issuer
+ -SignerCertificate.Subject
+ -Status (If its valid)
+ -StatusMessage (If the signature is verified)
+
+The results will be in console or GridView (excel look-a-like) where GridView has more data like certificate issuer, subject and other hash algorithms.
+
+
 Special thanks to:
 Oddvar Moe @ Twitter, http://oddvar.moe
 for the idea.
@@ -34,6 +49,8 @@ https://github.com/MHaggis/notes/blob/master/utilities/scan-drivers.ps1
 ### Living Off The Land Drivers
 Living Off The Land Drivers is a curated list of Windows drivers used by adversaries to bypass security controls and carry out attacks. The project helps security professionals stay informed and mitigate potential threats.
 https://www.loldrivers.io/api/drivers.json
+
+
 
 
 ## SimulAPTer
