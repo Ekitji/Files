@@ -28,6 +28,7 @@ https://www.loldrivers.io/api/drivers.json
 Download the LOLDriverScanner with certsign script and download the drivers.json file (link above, sorry no webrequest included, dont like pwsh talking to internet =] )
 Put the drivers.json in LOLDriverScanners root folder and run the script.
 This one is more aggressive and will search in whole C: for sys-files. It checks MD5,SHA1,SHA256, Authenticode (SHA256) against the loldrivers json file.
+
 **It will also retrieve information about the digital/certificate signature of the sys-file, allowing you to verify its authenticity and integrity.**
  -SignerCertificate.Issuer (Certificate Authority )
  -SignerCertificate.Subject  (Who certificate belongs to)
