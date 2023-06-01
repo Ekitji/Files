@@ -51,8 +51,8 @@ https://github.com/MHaggis/notes/blob/master/utilities/scan-drivers.ps1
 Living Off The Land Drivers is a curated list of Windows drivers used by adversaries to bypass security controls and carry out attacks. The project helps security professionals stay informed and mitigate potential threats.
 https://www.loldrivers.io/api/drivers.json
 
-
-
+<br>
+<br>
 
 ## SimulAPTer
 Uses saved EVTX logfiles (from breaches or other simulations) to simulate attacks in your environment by letting the user to specify usernames, hostnames etc. So you can simulate that the events happens in your systems to test alerts/queries and so on. The idea is to have a simulating option without the need to execute any commands in your environment (like other simulations tools).
