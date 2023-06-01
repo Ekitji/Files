@@ -28,12 +28,13 @@ https://www.loldrivers.io/api/drivers.json
 Download the LOLDriverScanner with certsign check script and download the drivers.json file (link above, sorry no webrequest included, dont like pwsh talking to internet =] )
 Put the drivers.json in LOLDriverScanners root folder and run the script.
 This one is more aggressive and will search in whole C: for sys-files. It checks MD5,SHA1,SHA256, Authenticode (SHA256) against the loldrivers json file.
-It will also retrieve information about the digital/certificate signature of the sys-file, allowing you to verify its authenticity and integrity. 
- -SignerCertificate.Issuer
+**It will also retrieve information about the digital/certificate signature of the sys-file, allowing you to verify its authenticity and integrity.**
+ -SignerCertificate.Issuer (Certificate Authority )
  -SignerCertificate.Subject  (Who certificate belongs to)
  -Status (If its valid)
  -StatusMessage (If the signature is verified)
 
+Use it to catch signed but expired sys-files. Get "manufacturer/Subject" of the sys-file etc.
 The results will be in console or GridView (excel look-a-like) where GridView has more data like certificate issuer, subject and other hash algorithms.
 
 
