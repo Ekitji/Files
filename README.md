@@ -2,7 +2,7 @@
 Files
 
 
-## LOLDriverScanner
+## LOLDriverScanner / LOLDriverScanner ALL
 https://www.loldrivers.io/api/drivers.json
 
 Download the LOLDriverScanner_ALL script and download the drivers.json file (link above, sorry no webrequest included, dont like pwsh talking to internet =] )
