@@ -40,6 +40,7 @@ This one is more aggressive and will search in whole C: for sys-files. It checks
  -StatusMessage (If the signature is verified)
 
 Use it to catch signed but expired sys-files. Get "manufacturer/Subject" of the sys-file etc.
+
 The results will be in console or GridView (excel look-a-like) where GridView has more data like certificate issuer, subject and other hash algorithms.
 
 
