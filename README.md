@@ -22,7 +22,7 @@ Correct the path "$loldriversFilePath" in the powershell script to the location 
 
 Run the script and check the results in console or GridView (excel look-a-like)
 
-## LOLDriverScanner With Certificate Signature check
+## LOLDriverScanner With Certificate Signature data
 https://www.loldrivers.io/api/drivers.json
 
 Download the LOLDriverScanner with certsign script and download the drivers.json file (link above, sorry no webrequest included, dont like pwsh talking to internet =] )
