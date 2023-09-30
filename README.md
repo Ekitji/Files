@@ -48,9 +48,8 @@ Special thanks to:
 Oddvar Moe @ Twitter, http://oddvar.moe
 for the idea.
 
-### Webrequest support and additional feature with path/file extension changes
-@MHaggis at
-https://github.com/MHaggis/notes/blob/master/utilities/scan-drivers.ps1
+### I have seen my script in other repos where it have minor modifications, would appreciate some creds mentioning my nick or this repo.............
+
 
 
 ### Living Off The Land Drivers
