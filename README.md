@@ -164,6 +164,10 @@ https://tryhackme.com/room/windowseventlogs
 
 https://tryhackme.com/room/sysmon hunting mimikatz, malware, metasploit etc.
 
+**Sources with ndjson file for directly importing to your SIEM**
+
+https://github.com/jamesspi/ohmymalware
+
 **Other sources for EVTX files**
 
 Generate them your self or run simulation frameworks and save them
