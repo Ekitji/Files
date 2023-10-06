@@ -128,9 +128,7 @@ Referens: https://www.elastic.co/blog/importing-csv-and-log-data-into-elasticsea
 
 Splunk, has 500mb file support, last checked May 2022
 
-Other solutions are to use alternative methods to get them in to your SIEM, like the use of a logshipper.
-You could also collect EVTX for same event channel and parse them with winlogbeat and use a converter to converting it back to EVTX format with
-pyevtx or something similar. There are also tools for mergin separate EVTX files into a single EVTX.
+Other solutions are to use alternative methods to get them in to your SIEM, like the use of a logshipper. Bulk importing it with elastic API, You could also collect EVTX for same event channel and parse them with winlogbeat and use a converter to converting it back to EVTX format with pyevtx or something similar. There are also tools for mergin separate EVTX files into a single EVTX.
 
 
 **Sources with EVTX files**
