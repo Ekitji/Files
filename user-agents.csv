@@ -41,7 +41,7 @@
 "Findstr.exe",,,"https://lolbas-project.github.io/lolbas/Binaries/Findstr/","goes over WebDAV"
 "Makecab.exe",,,"https://lolbas-project.github.io/lolbas/Binaries/Makecab/","goes over WebDAV"
 "replace.exe",,,"https://lolbas-project.github.io/lolbas/Binaries/Replace/","goes over WebDAV"
-"PrintBrm.exe",,,"https://lolbas-project.github.io/lolbas/Binaries/PrintBrm/","UNC Path",
+"PrintBrm.exe",,,"https://lolbas-project.github.io/lolbas/Binaries/PrintBrm/","UNC Path"
 "MpCmdRun.exe",,,"https://lolbas-project.github.io/lolbas/Binaries/MpCmdRun/","tested - not working"
 "msedge_proxy.exe",,,"https://lolbas-project.github.io/lolbas/Binaries/msedge_proxy/","tested - not working"
 "GfxDownloadWrapper.exe",,,"https://lolbas-project.github.io/lolbas/HonorableMentions/GfxDownloadWrapper/","tested - not working"
