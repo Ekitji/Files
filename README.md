@@ -202,3 +202,6 @@ tags: ["SimulAPTer", "simulation", "simulapter"]
 
 A list of User-Agents mapped to LOLBINS.
 Most of them are confirmed by me, some are not tested.
+Use this with your proxylogs, or other logs with user-agent field.
+Good starting point: https://www.nextron-systems.com/wp-content/uploads/2020/07/WebProxy_Event_Analysis_CheatSheet_1.0.1.pdf
+
