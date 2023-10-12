@@ -21,7 +21,7 @@
 "outlook.exe","*Outlook*","Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.10401; Pro)","https://user-agents.net/email-clients/outlook","not confirmed"
 "Powerpnt.exe","*PowerPoint*","Microsoft Office PowerPoint 2013","https://lolbas-project.github.io/lolbas/OtherMSBinaries/Powerpnt/","https://user-agents.net/applications/powerpoint not confirmed"
 "powershell.exe","*PowerShell*","Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.1682","","Only Invoke-WebRequest and Invoke-RestMethod has User-Agent, other methods is without"
-"winword.exe","*Word*","Microsoft Office Word 2013 (15.0.4569) Windows NT 6.2,"https://lolbas-project.github.io/lolbas/OtherMSBinaries/Winword/","https://user-agents.net/applications/word not confirmed"
+"winword.exe","*Word*","Microsoft Office Word 2013 (15.0.4569) Windows NT 6.2","https://lolbas-project.github.io/lolbas/OtherMSBinaries/Winword/","https://user-agents.net/applications/word not confirmed"
 "Excel.exe","*Excel*","Microsoft Office Excel 2013 (15.0.4420) Windows NT 6.2","https://lolbas-project.github.io/lolbas/OtherMSBinaries/Excel/","https://user-agents.net/applications/excel not confirmed"
 "ONENOTE.EXE","*OneNote*","Microsoft Office OneNote 2013","https://user-agents.net/applications/onenote","not confirmed"
 "wsl.exe",,,"https://lolbas-project.github.io/lolbas/OtherMSBinaries/Wsl/","not tested"
