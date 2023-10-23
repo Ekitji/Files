@@ -24,6 +24,7 @@
 "winword.exe","*Word*","Microsoft Office Word 2013 (15.0.4569) Windows NT 6.2","https://lolbas-project.github.io/lolbas/OtherMSBinaries/Winword/","https://user-agents.net/applications/word not confirmed"
 "Excel.exe","*Excel*","Microsoft Office Excel 2013 (15.0.4420) Windows NT 6.2","https://lolbas-project.github.io/lolbas/OtherMSBinaries/Excel/","https://user-agents.net/applications/excel not confirmed"
 "ONENOTE.EXE","*OneNote*","Microsoft Office OneNote 2013","https://user-agents.net/applications/onenote","not confirmed"
+"cmdl32.exe","*Connection\ Manager\ Vpn\ File\ Update*","Microsoft(R) Connection Manager Vpn File Update","https://www.hexacorn.com/blog/2017/04/30/the-archaeologologogology-3-downloading-stuff-with-cmdln32/"
 "wsl.exe",,,"https://lolbas-project.github.io/lolbas/OtherMSBinaries/Wsl/","not tested"
 "ProtocolHandler.exe",,,"https://lolbas-project.github.io/lolbas/OtherMSBinaries/ProtocolHandler/","not tested"
 "squirrel.exe",,,"https://lolbas-project.github.io/lolbas/OtherMSBinaries/Squirrel/","not tested"
