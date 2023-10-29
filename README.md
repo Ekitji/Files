@@ -206,6 +206,6 @@ Use this with your proxylogs, or other logs with user-agent field.
 Good starting point: https://www.nextron-systems.com/wp-content/uploads/2020/07/WebProxy_Event_Analysis_CheatSheet_1.0.1.pdf
 
 ## Filesec.io
-Custom list from based upon data of the content from https://filesec.io by the creator mrd0x
+Custom list based upon data of the content from https://filesec.io by the creator mrd0x
 filesec_io.csv
 
