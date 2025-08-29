@@ -9,7 +9,7 @@
 "hh.exe","*MSIE*","Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; Win64; x64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)","https://lolbas-project.github.io/lolbas/Binaries/Hh/"
 "imewdbld.exe","*MSIE*","Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; Win64; x64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)","https://lolbas-project.github.io/lolbas/Binaries/IMEWDBLD/"
 "Ieexec.exe","*MSIE*","Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; Win64; x64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)","https://lolbas-project.github.io/lolbas/Binaries/Ieexec/"
-"Installutil.exe","*MSIE*","Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729),"https://lolbas-project.github.io/lolbas/Binaries/Installutil/"
+"Installutil.exe","*MSIE*","Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)","https://lolbas-project.github.io/lolbas/Binaries/Installutil/"
 "curl.exe","curl\/*","curl/7.83.1","https://lolbas-project.github.io/lolbas/Binaries/Curl","User-agent is changeable with -A switch"
 "msedge.exe","*HeadlessChrome* OR *HeadlessEdg*","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/117.0.2045.47 Safari/537.36 HeadlessEdg/117.0.2045.47","https://lolbas-project.github.io/lolbas/Binaries/Msedge/","Headless switch in cmd-line syntax"
 "msedge.exe",,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47","https://lolbas-project.github.io/lolbas/Binaries/Msedge/","Regular download with cmd-line syntax"
@@ -46,3 +46,4 @@
 "MpCmdRun.exe",,,"https://lolbas-project.github.io/lolbas/Binaries/MpCmdRun/","tested - not working"
 "msedge_proxy.exe",,,"https://lolbas-project.github.io/lolbas/Binaries/msedge_proxy/","tested - not working"
 "GfxDownloadWrapper.exe",,,"https://lolbas-project.github.io/lolbas/HonorableMentions/GfxDownloadWrapper/","tested - not working"
+
